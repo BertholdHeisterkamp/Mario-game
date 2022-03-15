@@ -2,7 +2,7 @@
 
 import pygame
 import random
-import mysql.connector
+#import mysql.connector
 import math
 from pygame.locals import (
         RLEACCEL,
@@ -923,23 +923,23 @@ while running:
 if not running:
     print("Score:" + str(int(score)))
 
-    mydb  = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="bugs",
-            database="mariogame"
-    )
-    mycursor = mydb.cursor()
+#   mydb  = mysql.connector.connect(
+#           host="localhost",
+#           user="root",
+#           password="bugs",
+#           database="mariogame"
+#   )
+#   mycursor = mydb.cursor()
 
-    sql = "insert into scores (name, score) values (%s, %s)"
-    val = (name, score)
-    mycursor.execute(sql, val)
+#   sql = "insert into scores (name, score) values (%s, %s)"
+#   val = (name, score)
+#   mycursor.execute(sql, val)
 
-    mydb.commit()
+#   mydb.commit()
 
-    sql = "select * from scores order by score desc"
+#   sql = "select * from scores order by score desc"
 
-    mycursor.execute(sql)
-    myresult = mycursor.fetchall()
-    for x in myresult:
-        print(x)
+#   mycursor.execute(sql)
+#   myresult = mycursor.fetchall()
+#   for x in myresult:
+#       print(x)
